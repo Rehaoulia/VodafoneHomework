@@ -1,0 +1,19 @@
+.underline {
+    border-bottom: 4px solid red;
+    width: 15%;
+    align-self: center;
+}
+.title {
+    font-family: arial;
+    font-size: 250%;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+}

@@ -1,0 +1,53 @@
+<head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>    
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex">
+            <div class="col-2">
+                <a [routerLink]="['/']">
+                    <img src="../../assets/vodafone_logo.svg">
+                </a>
+            </div>
+            <div class="col-6"></div>
+            <div class="col-4 mt-2 ml-5">
+                <form [formGroup]="searchForm">
+                    <input formControlName="name" type="text" placeholder="Search for contact" class="form-control">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5">
+        <div class="d-flex justify-content-center">
+            <div class="d-flex flex-column">
+                <span class="title">Edit {{name}}'s Profile</span>
+                <div class="underline"></div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="col-sm-4">
+            <form [formGroup]="editForm" class="form-container">
+                <div class="d-flex mt-3">
+                    <label class="text-color" for="nameInput">Name:</label>
+                    <input type="text" class="form-control ml-4" id="nameInput" value={{this.name}}>
+                </div>
+                <div class="d-flex mt-3">
+                    <label class="email-class" for="emailInput">E-mail:</label>
+                    <input type="email" class="form-control ml-1" id="emailInput" value={{this.email}}>
+                </div>
+                <div class="d-flex mt-3">
+                    <label class="text-color" for="phoneInput">Phone:</label>
+                    <input type="tel" class="form-control ml-4" id="phoneInput" value={{this.phone}}>
+                </div>
+                <div class="mt-5 text-center">
+                    <button type="button" class="btn btn-outline-dark" [routerLink]="['/']">Add Contacts</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

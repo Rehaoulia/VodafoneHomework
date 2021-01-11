@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "vodafoneHomework"
+  "defaultProject": "vodafoneHomework",
+  "cli": {
+    "analytics": "4cab4991-a8e8-4f33-8157-c468a094fcd3"
+  }
 }
